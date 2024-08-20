@@ -1,6 +1,6 @@
 ﻿<!--Bulma boilerplate https://bulma.io/documentation/overview/classes/ -->
 <!DOCTYPE html>
-<html lang="it-it">
+<html lang="zh-cn">
 
 <head>
 	<meta charset="utf-8">
@@ -35,13 +35,33 @@ body {font-family: 'Domine', serif;}
 </style>	
 
 <body bgcolor="#F5F5F5">
+	<div>
+        <!-- 语言切换按钮 -->
+        <select id="languageSwitcher" onchange="switchLanguage()">
+            <option value="chinese">中文</option>
+            <option value="english">English</option>
+        </select>
+    </div>
+	<script>
+        function switchLanguage() {
+            var language = document.getElementById("languageSwitcher").value;
+            if (language === "english") {
+                window.location.href = "lupin-english.html";
+            } else {
+				window.location.href = "lupin-chinese.html";
+			}
+        }
+
+        // 设置默认选项为中文
+        document.getElementById("languageSwitcher").value = "chinese";
+    </script>
 	<!--Cover -->
 	<section class="hero is-fullheight" style="background: url('https://img.itch.zone/aW1hZ2UvMjg4NjQ3OS8xNzM1NDI5NS5wbmc=/original/WRQuZY.png') no-repeat center center; background-size: cover;">
 		<div class="hero-body">
 			<div class="container">
 
 					<div class="has-text-centered">
-						<h1 class="title is-1 has-text-weight-bold">The Extraordinary Adventures of <b class="has-text-danger-dark">Arsène Lupin</b>,
+						<h1 class="title is-1 has-text-weight-bold">非凡的旅程 <b class="has-text-danger-dark">Arsène Lupin</b>,
 Gentleman-burglar</h1>
 						<p class="subtitle is-3 has-text-danger-dark is-italic" style="color:red;">By Maurice Leblanc</p>						
 

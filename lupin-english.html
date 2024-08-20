@@ -1,6 +1,6 @@
 ﻿<!--Bulma boilerplate https://bulma.io/documentation/overview/classes/ -->
 <!DOCTYPE html>
-<html lang="it-it">
+<html lang="en-us">
 
 <head>
 	<meta charset="utf-8">
@@ -35,6 +35,26 @@ body {font-family: 'Domine', serif;}
 </style>	
 
 <body bgcolor="#F5F5F5">
+	<div>
+        <!-- 语言切换按钮 -->
+        <select id="languageSwitcher" onchange="switchLanguage()">
+            <option value="chinese">中文</option>
+            <option value="english">English</option>
+        </select>
+    </div>
+	<script>
+        function switchLanguage() {
+            var language = document.getElementById("languageSwitcher").value;
+            if (language === "english") {
+                window.location.href = "lupin-english.html";
+            } else {
+				window.location.href = "lupin-chinese.html";
+			}
+        }
+
+        // 设置默认选项为英文
+        document.getElementById("languageSwitcher").value = "english";
+    </script>
 	<!--Cover -->
 	<section class="hero is-fullheight" style="background: url('https://img.itch.zone/aW1hZ2UvMjg4NjQ3OS8xNzM1NDI5NS5wbmc=/original/WRQuZY.png') no-repeat center center; background-size: cover;">
 		<div class="hero-body">
